@@ -67,7 +67,7 @@ This game was developed on Jonas Schmedtmann's JavaScript course to practice the
 
 ## **Preview Site**
 
-- [Netlify](vinicius-guess-my-number.netlify.app)
+- [GitPages](https://viniciusshenri96.github.io/guess-my-number/)
 
 ---
 

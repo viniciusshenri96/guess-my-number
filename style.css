@@ -34,14 +34,14 @@ main {
 }
 
 .left {
-  width: 52rem;
+  max-width: 52rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .right {
-  width: 52rem;
+  max-width: 52rem;
   font-size: 2rem;
 }
 
@@ -89,7 +89,7 @@ h1 {
   color: inherit;
   font-size: 5rem;
   padding: 2.5rem;
-  width: 25rem;
+  max-width: 25rem;
   text-align: center;
   display: block;
   margin-bottom: 3rem;
@@ -116,4 +116,78 @@ h1 {
 
 .label-score {
   margin-bottom: 2rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  h1 {
+    font-size: 3.5rem;
+    width: 80%;
+  }
+
+  main {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .number {
+    font-size: 4rem;
+    width: 12rem;
+  }
+
+  .left {
+    margin-top: 100px;
+  }
+
+  .right {
+    width: initial;
+    font-size: 1.5rem;
+  }
+
+  .guess {
+    font-size: 4rem;
+    padding: 2rem;
+    width: 20rem;
+    margin-bottom: 3rem;
+  }
+
+  .message {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .between {
+    font-size: 1rem;
+    position: absolute;
+    top: 3.5rem;
+    right: 1rem;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+    padding: 1.5rem 2.5rem;
+  }
+  .header-content {
+    display: flex;
+  }
+
+  .right {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .between {
+    font-size: 0.7rem;
+    top: 4rem;
+    right: 0.5rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 1.2rem 2.2rem;
+  }
 }

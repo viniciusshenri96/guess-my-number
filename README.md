@@ -1,109 +1,60 @@
-</p>
-<h1 align="center"> 
-    Guess My Number<br> 
-    <hr>
-    <img alt="Guess My Number" title="" src="guessmynumber.png"/>
+<h1 align="center">Guess My Number
 </h1>
 
-<h4 align="center"> 
-	🚧 Guess My Number 🟢 Concluído 🚀 🚧
-</h4>
+![](./readme/guess-my-number.jpg)
 
-<img alt="" title="" src="readme/nivel.svg"/>
-
-<!-- <p align="center">
- <a href="#-Projeto">Sobre</a> •
- <a href="#-funcionalidades">Funcionalidades</a> •
- <a href="#-descricao">Descrição</a> •
- <a href="#-layout">Layout</a> •
- <a href="#-tecnologias">Tecnologias</a> •
- <a href="#-autor">Autor</a>
-</p> -->
-
-- [Project](#project)
-- [About](#about)
-- [Functionalities](#functionalities)
-- [Technologies](#technologies)
-- [PreviewSite](#preview-site)
-- [Author](#author)
-
----
-
-## **Project**
-
-_Guess My Number_ - A game developed with HTML, CSS and Vanilla JS.
+<h2 align="center"> 
+	🚧 Guess My Number 🟢 Completed 🚀 🚧
+  
+</h2>
 
 &nbsp;
 
-## **About:**
-
-This game was developed on Jonas Schmedtmann's JavaScript course to practice the basics of DOM Manipulation, it's a guessing number game.
-
----
-
-## **Functionalities**
-
-- [x] Button to check the number(Check!)
-- [x] Button to reset the game and restart(Again!)
-
----
-
-<!-- ### Mobile
-
-<p align="left">
-
-  <img alt="Art gallery website" title="#art-gallery-website" src="readme/index-mobile.png" width="150px">
-    <img alt="Art gallery website" title="#art-gallery-website" src="readme/location-mobile.png" width="150px">
-
-</p> -->
 <!--
-### Tablet
+## Table of contents
 
-<p align="left">
-   <img alt="Art gallery website" title="#art-gallery-website" src="readme/index-tablet.png" width="400px">
-     <img alt="Art gallery website" title="#art-gallery-website" src="readme/location-tablet.png" width="400px">
+- [Project description](#description) - [What I learned](#What-I-learned) -->
 
-</p> -->
+<h2 id="#description">Project description 📚</h2>
 
-## **Preview Site**
+Guess My Number - A game developed with HTML, CSS and Vanilla JS.
 
-- [GitPages](https://viniciusshenri96.github.io/guess-my-number/)
+This game was developed on Jonas Schmedtmann's JavaScript course to practice the basics of DOM Manipulation, it's a guessing number game..
 
----
+&nbsp;
 
-## **Technologies**
+## What I learned
 
-The following tools were used in building the project:
+In this project I learned the basics of DOM, how to select elements, events, DRY(Don't repeat yourself), functions and handling classes with classlist.
 
-#### **Website**
+```js
+document.querySelector('.check').addEventListener('click', function () {
+  ...
+});
+document.querySelector('.again').addEventListener('click', function () {
+  ...
+});
+```
 
-- **[HTML]()**
-- **[CSS]()**
-- **[Vanilla JS JavaScript]()**
+&nbsp;
 
----
+## Links
 
-## **Author**
+- [Preview Site](https://viniciusshenri96.github.io/guess-my-number/)
 
-<a href="https://www.frontendmentor.io/profile/viniciusshenri96">
-  <!-- <img style="border-radius: 50%;" src="./assets/img/avatar.jpg" width="100px;" alt=""/> -->
- <sub><h2 style="font-style: normal; color:">Vinícius Henrique</></sub>
- <br /> 
- </a>
+&nbsp;
 
-<!-- [![Twitter Badge](https://img.shields.io/badge/-@tgmarinho-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/tgmarinho)](https://twitter.com/tgmarinho)  -->
+## My process
 
-[![Linkedin Badge](https://img.shields.io/badge/-Vinícius-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://https://www.linkedin.com/in/vinícius-henrique-7a2533229/)](https://www.linkedin.com/in/vinícius-henrique-7a2533229/)
-[![Gmail Badge](https://img.shields.io/badge/-viniciush2015@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:viniciush2015@gmail.com)](mailto:viniciush2015@gmail.com)
+### Built with
 
-<!-- ## 📝 Licença
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [Vanilla Js](http://vanilla-js.com)
 
-Este projeto esta sobe a licença [MIT](./LICENSE).
+&nbsp;
 
-Feito com ❤️ por Thiago Marinho 👋🏽 [Entre em contato!](https://www.linkedin.com/in/tgmarinho/)
+## 👨‍💻 Author
 
----
-
-## Versões do README
-
-[Português 🇧🇷](./README.md) | [Inglês sem emojis 🇺🇸](./README-en.md) | [Portugues sem logo 🇧🇷](./README-sem-logo.md) -->
+- [Frontend Mentor](https://www.frontendmentor.io/profile/viniciusshenri96)
+- [Linkedin](https://www.linkedin.com/in/vinícius-henrique-7a2533229/)

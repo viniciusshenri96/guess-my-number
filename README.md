@@ -19,7 +19,9 @@
 
 Guess My Number - A game developed with HTML, CSS and Vanilla JS.
 
-This game was developed on Jonas Schmedtmann's JavaScript course to practice the basics of DOM Manipulation, it's a guessing number game..
+This game was developed on Jonas Schmedtmann's JavaScript course to practice the basics of DOM Manipulation, it's a guessing number game.
+
+This fun game aims to guess the number that the user has typed in the box above the check button! and after clicking the button, the game algorithm will check to see if the number is the same as the one hidden in the '?', the game allows only 20 attempts, it is also possible to save the highest score in Highscore, and also reset the game on the button Again!
 
 &nbsp;
 

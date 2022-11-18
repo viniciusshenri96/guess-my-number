@@ -34,14 +34,15 @@ main {
 }
 
 .left {
-  max-width: 52rem;
+  width: 42rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .right {
-  max-width: 52rem;
+  width: 52rem;
   font-size: 2rem;
 }
 
@@ -93,6 +94,30 @@ h1 {
   text-align: center;
   display: block;
   margin-bottom: 3rem;
+}
+
+.message-nonumber {
+  text-align: center;
+  width: 52rem;
+  font-size: 1rem;
+  padding-bottom: 20px;
+  display: none;
+  color: red;
+  animation: messageShow 1.3s ease-in-out forwards;
+  animation-iteration-count: 5;
+}
+
+.message-nonumber.active {
+  display: block;
+}
+
+@keyframes messageShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .btn {

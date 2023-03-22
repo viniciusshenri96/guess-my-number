@@ -15,7 +15,7 @@ body {
   font-family: 'Press Start 2P', sans-serif;
   color: #eee;
   background-color: #222;
-  /* background-color: #60b347; */
+  /* background-color: #b34c47; */
 }
 
 /* LAYOUT */
@@ -112,6 +112,7 @@ h1 {
 .message {
   margin-bottom: 8rem;
   height: 3rem;
+  font-size: 3rem;
 }
 
 .label-score {

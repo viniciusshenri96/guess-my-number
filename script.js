@@ -1,54 +1,49 @@
 'use strict';
+const numberEl = document.querySelector('.number');
+const guessEl = document.querySelector('.guess');
+const btnCheck = document.querySelector('.check');
+const messageEl = document.querySelector('.message');
+const scoreEl = document.querySelector('.score');
 
-let secretNumber = Math.trunc(Math.random() * 20) + 1;
-let score = 20;
-let highscore = 0;
+class Game {
+  #numberSecret = Math.floor(Math.random() * 20) + 1;
+  #valueChecked;
+  #score = 20;
 
-const displayMessage = function (message) {
-  document.querySelector('.message').textContent = message;
-};
+  constructor() {
+    this.#methodCheckNumber();
+    this.#methodNumberSecret();
+    numberEl.textContent = '?';
+  }
 
-document.querySelector('.check').addEventListener('click', function () {
-  const guess = Number(document.querySelector('.guess').value);
-  // When there is input
-  if (!guess) {
-    displayMessage('⛔ No number');
-    // when player wins
-  } else if (guess === secretNumber) {
-    displayMessage('Correct Number! 🎉');
-    document.querySelector('body').style.backgroundColor = '#60b347';
-    document.querySelector('.number').style.width = '30rem';
+  #methodNumberSecret() {
+    numberEl.textContent = this.#numberSecret;
+  }
 
-    document.querySelector('.number').textContent = secretNumber;
+  #methodCheckNumber() {
+    btnCheck.addEventListener('click', () => {
+      this.#valueChecked = +guessEl.value;
+      this.#scoreGame();
+      this.#winnerGame();
+    });
+  }
 
-    if (score > highscore) {
-      highscore = score;
-      document.querySelector('.highscore').textContent = highscore;
-    }
-
-    // When guess is wrong
-  } else if (guess !== secretNumber) {
-    if (score > 1) {
-      displayMessage(guess > secretNumber ? '📈 Too high!' : '📉 Too low!');
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.score').textContent = 0;
-      displayMessage('You lost the game!! 😂😂');
+  #winnerGame() {
+    if (this.#valueChecked === this.#numberSecret) {
+      messageEl.textContent = 'You Mon';
+      document.body.style.backgroundColor = '#60b347';
     }
   }
-});
 
-// Reset game
-document.querySelector('.again').addEventListener('click', function () {
-  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  #scoreGame() {
+    if (this.#valueChecked !== this.#numberSecret) {
+      if (this.#score > 1) return (scoreEl.textContent = --this.#score);
 
-  document.querySelector('.number').textContent = '?';
-  score = 20;
-  document.querySelector('.score').textContent = score;
-  displayMessage('Start guessing...');
-  document.querySelector('.guess').value = '';
+      scoreEl.textContent = 0;
+      messageEl.textContent = 'You lost!';
+      document.body.style.backgroundColor = '#b34c47';
+    }
+  }
+}
 
-  document.querySelector('body').style.backgroundColor = '#222';
-  document.querySelector('.number').style.width = '15rem';
-});
+const app = new Game();

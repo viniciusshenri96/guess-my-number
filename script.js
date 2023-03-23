@@ -2,9 +2,11 @@
 const numberEl = document.querySelector('.number');
 const guessEl = document.querySelector('.guess');
 const btnCheck = document.querySelector('.check');
+const btnAgain = document.querySelector('.again');
 const messageEl = document.querySelector('.message');
 const scoreEl = document.querySelector('.score');
 const highscoreEl = document.querySelector('.highscore');
+
 class Game {
   #numberSecret = Math.floor(Math.random() * 20) + 1;
   #valueChecked;
@@ -15,6 +17,7 @@ class Game {
     this.#methodCheckNumber();
     this.#methodNumberSecret();
     numberEl.textContent = '?';
+    this.#resetGame();
   }
 
   message(message) {
@@ -31,7 +34,6 @@ class Game {
       this.#valueChecked = +guessEl.value;
       this.#scoreGame();
       this.#updateMessage();
-
       this.#winnerGame();
     });
   }
@@ -61,6 +63,20 @@ class Game {
       this.#highscore = this.#score;
       highscoreEl.textContent = this.#highscore;
     }
+  }
+
+  #resetGame() {
+    btnAgain.addEventListener('click', () => {
+      this.#numberSecret = Math.floor(Math.random() * 20) + 1;
+      messageEl.textContent = 'Start guessing...';
+
+      this.#score = 20;
+      scoreEl.textContent = this.#score;
+
+      numberEl.textContent = '?';
+      document.body.style.backgroundColor = '#222';
+      guessEl.value = '';
+    });
   }
 }
 

@@ -4,16 +4,22 @@ const guessEl = document.querySelector('.guess');
 const btnCheck = document.querySelector('.check');
 const messageEl = document.querySelector('.message');
 const scoreEl = document.querySelector('.score');
-
+const highscoreEl = document.querySelector('.highscore');
 class Game {
   #numberSecret = Math.floor(Math.random() * 20) + 1;
   #valueChecked;
   #score = 20;
+  #highscore = 0;
 
   constructor() {
     this.#methodCheckNumber();
     this.#methodNumberSecret();
     numberEl.textContent = '?';
+  }
+
+  message(message) {
+    console.log(message);
+    messageEl.textContent = message;
   }
 
   #methodNumberSecret() {
@@ -24,24 +30,36 @@ class Game {
     btnCheck.addEventListener('click', () => {
       this.#valueChecked = +guessEl.value;
       this.#scoreGame();
+      this.#updateMessage();
+
       this.#winnerGame();
     });
   }
 
   #winnerGame() {
     if (this.#valueChecked === this.#numberSecret) {
-      messageEl.textContent = 'You Mon';
+      this.message('You Mon 🎉🏆🎉🏆');
       document.body.style.backgroundColor = '#60b347';
+      this.#highscoreUpdate();
+      numberEl.textContent = this.#numberSecret;
     }
   }
 
   #scoreGame() {
-    if (this.#valueChecked !== this.#numberSecret) {
-      if (this.#score > 1) return (scoreEl.textContent = --this.#score);
+    if (this.#score > 1) return (scoreEl.textContent = --this.#score);
+    scoreEl.textContent = 0;
+  }
 
-      scoreEl.textContent = 0;
-      messageEl.textContent = 'You lost!';
-      document.body.style.backgroundColor = '#b34c47';
+  #updateMessage() {
+    this.#valueChecked > this.#numberSecret
+      ? this.message('Very high 📈')
+      : this.message('Very low  📉');
+  }
+
+  #highscoreUpdate() {
+    if (this.#score > this.#highscore) {
+      this.#highscore = this.#score;
+      highscoreEl.textContent = this.#highscore;
     }
   }
 }
